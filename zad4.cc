@@ -18,7 +18,7 @@ int main () {
 #pragma omp parallel num_threads(8) 
 {
 
-   #pragma omp sections 
+   #pragma omp parallel sections shared(a)
    {
       #pragma omp section 
 	  a = fun(a);
